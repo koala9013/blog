@@ -8,6 +8,10 @@
 
 // module.exports = router;
 module.exports = function (app){
+	app.get('/test', function (req, res){
+		res.render('test', {title : 'TEST'});
+	})
+
 	app.get('/', function(req, res){
 		res.render('index', {title: 'Express'});
 	});
