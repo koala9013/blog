@@ -57,5 +57,16 @@ app.use(function(err, req, res, next) {
   });
 });
 
+// var mongo = require('./utils/mongoose');
+// mongo.connect(function(err){
+//   if (err){
+//     console.log(err);
+//     throw err;
+//   }
+// })
+
+// app.on('close', function(errno) {
+//   mongoHelper.disconnect(function(err) { });
+// });
 
 module.exports = app;
