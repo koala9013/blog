@@ -1,8 +1,16 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.login-body {
+	background-color: #000
+}
+.login-div{
+	width: 20%;
+	margin: 0 auto;
+	position: absolute;
+	top: 200px;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
 
-a {
-  color: #00B7FF;
+.index-body{
+	padding-top: 50px
 }

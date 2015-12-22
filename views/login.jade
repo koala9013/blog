@@ -1,4 +1,13 @@
 extends layout
 
 block content
-	
+	body.login-body
+		div.login-div
+			form.form-horizontal(action='/')
+				div.form-group
+					input.form-control(type='text',placeholder="Enter UserName")
+				div.form-group
+					input.form-control(id='pwd',type='password',placeholder="Enter Password")
+				div(style='text-align:center')
+					button.btn.btn-primary 登录
+					//-button.btn.btn-primary(style='position:absolute;right:25%') 注册

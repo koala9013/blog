@@ -1,7 +1,14 @@
 extends layout
 
 block content
-  h1 title
-  h2 Welcome to #{title}
-  kbd shift
-  s.text-right.text-uppercase hahaha
+	nav.navbar.navbar-inverse.navbar-fixed-top
+		div.container-fluid
+			div.navbar-header
+				a.navbar-brand(href='#')
+					img(alt='B') 
+					//-src='/images/logo.jpg' style='width:50px;height:50px')
+
+	div.container-fluid.index-body
+		div.row
+			div.col-md-3 md3
+			div.col-md-9 md9
