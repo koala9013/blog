@@ -1,14 +1,29 @@
 extends layout
 
+block append head
+	link(rel='stylesheet' href='/stylesheets/style.css')
+	script(src='/js/weather.js')
 block content
 	nav.navbar.navbar-inverse.navbar-fixed-top
 		div.container-fluid
 			div.navbar-header
 				a.navbar-brand(href='#')
-					img(alt='B') 
-					//-src='/images/logo.jpg' style='width:50px;height:50px')
+					span.glyphicon.glyphicon-thumbs-up(aria-hidden='true')
+				p.navbar-text MIMIMI
+				a.navbar-text.navbar-right
+					img#weather(src='#{weatherImg}')
 
 	div.container-fluid.index-body
 		div.row
-			div.col-md-3 md3
+			//- 侧边栏
+			div.col-md-3
+				span.glyphicon.glyphicon-thumbs-up(aria-hidden="true")
+			//- 正文内容
 			div.col-md-9 md9
+
+	//- <script>
+	//- 	$(function(){
+	//- 		// var img = getWeather();
+	//- 		// $('weather').attr('src', img);
+	//- 	});
+	//- </script>

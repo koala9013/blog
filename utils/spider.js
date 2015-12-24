@@ -1,21 +1,17 @@
-var http = require('http')
+var http    = require('http')
 var request = require('request')
-var $ = require('jQuery')
-var fs = require('fs')
-var _ = require('underscore')
+var $       = require('jQuery')
+var fs      = require('fs')
+var _       = require('underscore')
 
-var url = 'http://www.dbmeinv.com/dbgroup/rank.htm?pager_offset=';
+var url     = 'http://www.dbmeinv.com/dbgroup/rank.htm?pager_offset=';
+var j       = 1000;
 
-var j = 16;
-console.log(j);
-// while(j > 0){
-// 	// process.nextTick(function(){
-// 	// 	spider(url + j);
-// 	// });
-// 	console.log(j);
-// 	j--
-// }
-spider(url + j);
+// setInterval(function(){
+// 	spider(url + j);
+// 	j--;
+// }, 3000);
+spider(url + '200');
 function spider(url){
 	request(url, function(err, response, body){
 		console.log(url + ' response ' + response.statusCode);

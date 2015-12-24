@@ -8,6 +8,7 @@
 
 // module.exports = router;
 var http = require('http');
+var weather = require('../utils/weather')
 
 module.exports = function (app){
 	// app.get('/test', function (req, res){
@@ -20,7 +21,9 @@ module.exports = function (app){
 	// });
 
 	app.get('/', function(req, res){
-		res.render('index', {title: 'index'});
+		var img = weather.weather();
+		console.log(img);
+		res.render('index', {title: 'index', weatherImg: img});
 	});
 
 	app.get('/reg', function(req, res){
